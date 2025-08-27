@@ -1,0 +1,33 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+### Gradle ###
+.gradle/
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Local .gradle properties
+gradle.properties
+
+# Wrapper jar (optional, some projects commit this)
+gradle/wrapper/gradle-wrapper.jar
+
+### OS Junk ###
+.DS_Store
+Thumbs.db
+
+### Logs ###
+*.log
+
+### Kotlin ###
+*.class
+*.kotlin_metadata
+
+### VS Code (if you use it) ###
+.vscode/
