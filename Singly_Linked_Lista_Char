@@ -1,0 +1,67 @@
+using System;
+
+public class Program
+{
+    private class Node
+    {
+        public char Value { get; set; }
+        public Node Next { get; set; }
+
+        public Node(char value)
+        {
+            Value = value;
+            Next = null;
+        }
+    }
+
+    private class ListaEnlazada
+    {
+        private Node head;
+
+        public void Agregar(char letra)
+        {
+            Node nuevo = new Node(letra);
+
+            if (head == null)
+            {
+                head = nuevo;
+            }
+            else
+            {
+                Node actual = head;
+                while (actual.Next != null)
+                {
+                    actual = actual.Next;
+                }
+                actual.Next = nuevo;
+            }
+        }
+
+        public override string ToString()
+        {
+            Node actual = head;
+            string resultado = "";
+            while (actual != null)
+            {
+                resultado += actual.Value + " -> ";
+                actual = actual.Next;
+            }
+            resultado += "null";
+            return resultado;
+        }
+    }
+
+    public static void Main()
+    {
+        string palabra = "avisame";
+        ListaEnlazada lista = new ListaEnlazada();
+
+        foreach (char letra in palabra)
+        {
+            lista.Agregar(letra);
+        }
+
+        Console.WriteLine(lista.ToString()); 
+    }
+}
+
