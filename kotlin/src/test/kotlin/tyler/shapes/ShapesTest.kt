@@ -1,6 +1,7 @@
 package tyler.shapes
 
 import org.junit.jupiter.api.Test
+import kotlin.math.exp
 import kotlin.math.pow
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -59,5 +60,19 @@ class ShapesTest {
         val expectedArea = Math.PI * (2.0).pow(x = 2.0)
 
         assertEquals(expectedArea, actualArea)
+    }
+
+    @Test
+    fun `toString returns the overridden string`() {
+        val circle = Circle(radius = 1.0)
+        val square = Square(sideLength = 2.0)
+
+        val expectedString = SHAPE_TO_STRING_OVERRIDE
+
+        val actualStringCircle = circle.toString()
+        val actualStringSquare = square.toString()
+
+        assertEquals(expectedString, actualStringSquare)
+        assertEquals(expectedString, actualStringCircle)
     }
 }
