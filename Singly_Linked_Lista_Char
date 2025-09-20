@@ -2,7 +2,7 @@ using System;
 
 public class Program
 {
-    public class Node
+    private class Node
     {
         public char Value { get; set; }
         public Node Next { get; set; }
@@ -14,7 +14,7 @@ public class Program
         }
     }
 
-    public class ListaEnlazada
+    private class ListaEnlazada
     {
         private Node head;
 
@@ -37,15 +37,17 @@ public class Program
             }
         }
 
-        public void Imprimir()
+        public override string ToString()
         {
             Node actual = head;
+            string resultado = "";
             while (actual != null)
             {
-                Console.Write(actual.Value + " -> ");
+                resultado += actual.Value + " -> ";
                 actual = actual.Next;
             }
-            Console.WriteLine("null");
+            resultado += "null";
+            return resultado;
         }
     }
 
@@ -59,6 +61,7 @@ public class Program
             lista.Agregar(letra);
         }
 
-        lista.Imprimir();
+        Console.WriteLine(lista.ToString()); 
     }
 }
+
