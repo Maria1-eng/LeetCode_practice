@@ -1,2 +1,3 @@
-# LeetCode_practice
-This repository contains solutions of LeetCode problems and Unit Tests 
+# LeetCode Practice
+
+LeetCode problems solved in C# and Kotlin. The Kotlin solutions include unit tests and cover concepts like inheritance and polymorphism.
