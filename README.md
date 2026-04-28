@@ -1,3 +1,3 @@
 # LeetCode Practice
 
-LeetCode problems solved in C# and Kotlin. The Kotlin solutions include unit tests and cover concepts like inheritance and polymorphism.
+LeetCode problems solved in C# and Kotlin. The Kotlin solutions apply OOP concepts including inheritance and polymorphism, and are covered with unit tests using JUnit 5.
